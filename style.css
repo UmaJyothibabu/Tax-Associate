@@ -1,0 +1,452 @@
+:root {
+  --nav-color: #163651;
+  --primary-color: #fff;
+  --secondary-color: #f0f9f9;
+  --tertiary-color: #40a5a2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--nav-color);
+  width: 100vw;
+  min-height: 40px;
+  color: var(--primary-color);
+}
+
+.contact {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 2.5rem;
+  flex-grow: 1;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.contact-item span {
+  padding-right: 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+}
+
+.contact-item .bi-square-fill,
+.bi-envelope-fill,
+.bi-clock {
+  color: var(--tertiary-color);
+  font-size: 1rem;
+  margin-right: 0.4rem;
+}
+.contact-item .bi-square-fill {
+  position: relative;
+}
+.bi-telephone-fill {
+  position: absolute;
+  top: 0.15rem;
+  left: 0.2rem;
+  font-size: 0.65rem;
+  color: var(--nav-color);
+}
+
+.social {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1.7rem;
+}
+.social div {
+  width: 3.5rem;
+}
+
+.bi-facebook,
+.bi-circle-fill,
+.bi-linkedin,
+.bi-square-fill,
+.bi-list {
+  font-size: 1.5rem;
+}
+
+.bi-square-fill,
+.bi-circle-fill {
+  position: relative;
+}
+.bi-linkedin {
+  position: absolute;
+  right: 0.001rem;
+  color: var(--nav-color);
+  font-size: 1.54rem;
+}
+
+.bi-twitter {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  font-size: 1rem;
+  color: var(--nav-color);
+}
+nav {
+  width: 100vw;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  padding-right: 3rem;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+}
+.logo {
+  flex-grow: 3;
+  padding-left: 2.5rem;
+}
+nav ul {
+  flex-grow: 7;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  gap: 32px;
+}
+nav ul li {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+nav ul li a:hover {
+  color: var(--tertiary-color);
+  text-shadow: 0.5px 0.5px var(--tertiary-color);
+}
+nav ul li:hover {
+  transform: scale(1.2);
+  text-shadow: 0.1px 0.1px var(--tertiary-color);
+}
+
+.toggle-icon {
+  display: none;
+}
+
+.hero-section {
+  background-image: url(./assests/hero-image.png);
+  background-size: cover;
+  width: 100%;
+  height: 41rem;
+  display: flex;
+  align-items: center;
+  padding: 2.5rem;
+  flex-wrap: wrap;
+}
+.text-btn-grp {
+  flex-grow: 1;
+  color: var(--primary-color);
+  font-family: "Inter", sans-serif;
+}
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  width: 35rem;
+  margin-bottom: 1.5rem;
+}
+
+.text-btn-grp p {
+  width: 27.5rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.text-btn-grp button {
+  padding: 11px 24px;
+  border-radius: 1.5rem;
+  border: none;
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-container {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.form-box {
+  padding: 1.5rem;
+  width: 365px;
+  height: 491px;
+
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  box-shadow: 0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+  border: none;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  gap: 1.5rem;
+}
+
+.inputs div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+label {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  color: #091520;
+}
+input {
+  font-family: "Inter", sans-serif;
+  height: 2.5rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 1.25rem;
+}
+.checkbox-container {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid #627089;
+  border-radius: 2px;
+}
+input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 6px;
+  width: 6px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+input[type="checkbox"]:checked {
+  background-color: #627089;
+  border-color: #627089;
+}
+input[type="checkbox"]:checked::after {
+  opacity: 1;
+}
+.submit-btn {
+  margin-top: 2.5rem;
+}
+.submit-btn button {
+  padding: 11px 24px;
+  border-radius: 1.5rem;
+  border: none;
+  background-color: #02274c;
+  color: white;
+}
+.bi-arrow-right-circle-fill {
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.content {
+  width: 100vw;
+  background-color: #f0f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.content-box {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.description h6 {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #163651;
+}
+
+.description p {
+  width: 23rem;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  color: #091520;
+}
+
+.icon-box .bi-circle-fill {
+  font-size: 4rem;
+  color: var(--tertiary-color);
+  position: relative;
+}
+.bi-shield-check,
+.bi-circle-fill img {
+  font-size: 34px;
+  color: var(--primary-color);
+  position: absolute;
+  left: 0.9rem;
+  top: 0.9rem;
+}
+
+@media only screen and (max-width: 1023px) {
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .social {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  .hero-section {
+    background-image: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .text-btn-grp {
+    width: 100%;
+    height: 80vh;
+    background-image: url(./assests/hero-image.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  .form-container {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .content-box {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 786px) {
+  nav ul li {
+    display: none;
+  }
+  .toggle-icon {
+    display: block;
+  }
+  .bi-list {
+    color: black;
+  }
+  .bi-list:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+  }
+  .responsive {
+    position: relative;
+  }
+  .responsive .toggle-icon {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+  .responsive ul {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 22px;
+    position: absolute;
+    top: 5rem;
+    background-color: #f0f9f9e7;
+    padding: 1.5rem;
+    width: 100vw;
+  }
+  .responsive ul li {
+    display: block;
+    text-align: left;
+  }
+  nav ul li a:hover {
+    font-size: 18px;
+    text-decoration: underline;
+    color: var(--tertiary-color);
+    text-shadow: 0.5px 0.5px var(--tertiary-color);
+  }
+  nav ul li:hover {
+    transform: scale(1);
+    text-shadow: 0.1px 0.1px var(--tertiary-color);
+  }
+  .logo {
+    flex-grow: 1;
+    padding-left: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    width: auto;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+  .text-btn-grp p {
+    width: auto;
+    text-align: center;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+  .form-container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .form-box {
+    width: 18.75rem;
+    height: auto;
+  }
+  .description p {
+    width: auto;
+  }
+}
